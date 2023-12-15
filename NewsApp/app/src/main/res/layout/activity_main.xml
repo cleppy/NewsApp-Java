@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/btnNews"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:backgroundTint="@color/bg"
+        android:src="@drawable/news"
+        android:scaleType="fitXY"/>
+
+    <ImageButton
+        android:id="@+id/btnDoviz"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:backgroundTint="@color/bg"
+        android:src="@drawable/borsa"
+        android:scaleType="fitXY"
+        android:layout_below="@id/btnNews" />
+
+    <ImageButton
+        android:id="@+id/btnBorsa"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:backgroundTint="@color/bg"
+        android:src="@drawable/borsaist"
+        android:scaleType="fitXY"
+        android:layout_below="@id/btnDoviz" />
+</RelativeLayout>

@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/usdIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/usd_icon"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 USD = "
+            android:layout_toEndOf="@id/usdIcon"/>
+
+        <TextView
+            android:id="@+id/usdRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/usdIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eurIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/usdIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/euro_icon"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 EUR = "
+            android:layout_toEndOf="@id/eurIcon"/>
+
+        <TextView
+            android:id="@+id/eurRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/eurIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gbpIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/eurIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/gbp_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="1 GBP = "
+            android:layout_toEndOf="@id/gbpIcon" />
+
+        <TextView
+            android:id="@+id/gbpRateTextView"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/gbpIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btcIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/gbpIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/btc_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 BTC = "
+            android:layout_toEndOf="@id/btcIcon" />
+
+        <TextView
+            android:id="@+id/btcRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/btcIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jpyIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/btcIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/yen_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 JPY = "
+            android:layout_toEndOf="@id/jpyIcon" />
+
+        <TextView
+            android:id="@+id/jpyRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/jpyIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cadIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/jpyIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/cad_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 CAD = "
+            android:layout_toEndOf="@id/cadIcon" />
+
+        <TextView
+            android:id="@+id/cadRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cadIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/audIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/cadIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/aud_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 AUD = "
+            android:layout_toEndOf="@id/audIcon" />
+
+        <TextView
+            android:id="@+id/audRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/audIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chfIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/audIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/chf_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 CHF = "
+            android:layout_toEndOf="@id/chfIcon" />
+
+        <TextView
+            android:id="@+id/chfRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/chfIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cnyIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/chfIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/yen_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 CNY = "
+            android:layout_toEndOf="@id/cnyIcon" />
+
+        <TextView
+            android:id="@+id/cnyRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cnyIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inrIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/cnyIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/inr_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 INR = "
+            android:layout_toEndOf="@id/inrIcon" />
+
+        <TextView
+            android:id="@+id/inrRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/inrIcon" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/zarIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/inrIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/zar_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 ZAR = "
+            android:layout_toEndOf="@id/zarIcon" />
+
+        <TextView
+            android:id="@+id/zarRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/zarIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/egpIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/zarIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/egp_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 EGP = "
+            android:layout_toEndOf="@id/egpIcon" />
+
+        <TextView
+            android:id="@+id/egpRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/egpIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/brlIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/egpIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/brl_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 BRL = "
+            android:layout_toEndOf="@id/brlIcon" />
+
+        <TextView
+            android:id="@+id/brlRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/brlIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mxnIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/brlIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/mxn_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 MXN = "
+            android:layout_toEndOf="@id/mxnIcon" />
+
+        <TextView
+            android:id="@+id/mxnRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/mxnIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/arsIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/mxnIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ars_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 ARS = "
+            android:layout_toEndOf="@id/arsIcon" />
+
+        <TextView
+            android:id="@+id/arsRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/arsIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/clpIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/arsIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/clp_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 CLP = "
+            android:layout_toEndOf="@id/clpIcon" />
+
+        <TextView
+            android:id="@+id/clpRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/clpIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sekIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/clpIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/sek_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 SEK = "
+            android:layout_toEndOf="@id/sekIcon" />
+
+        <TextView
+            android:id="@+id/sekRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/sekIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nokIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/sekIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/nok_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 NOK = "
+            android:layout_toEndOf="@id/nokIcon" />
+
+        <TextView
+            android:id="@+id/nokRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/nokIcon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dkkIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/nokIcon">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/dkk_icon"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="1 DKK = "
+            android:layout_toEndOf="@id/dkkIcon" />
+
+        <TextView
+            android:id="@+id/dkkRateTextView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/dkkIcon" />
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
